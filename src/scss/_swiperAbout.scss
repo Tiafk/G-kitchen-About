@@ -1,0 +1,92 @@
+
+.block-slider {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 0 10px;
+    h2 {
+        margin-left: 10%;
+        font-size: 28px;
+        color: #1C1C1C;
+        padding: 72px 0 28px;
+    }
+
+    .mySwiper_about {
+      width: 100%;
+      height: 560px;
+      overflow: visible;
+
+      .swiper-wrapper {
+        box-sizing: border-box;
+        padding-bottom: 20px;
+
+          .swiper-slide {
+            display: flex;
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+            img {
+              border-radius: 20px;
+                height: 100%;
+                object-fit: cover;
+            }
+          }
+      }
+    }
+}
+
+.swiper-button-next {
+  margin-right: 20px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  display: none !important;
+  width: 36px !important;
+  height: 36px !important;
+  color: #1C1C1C !important;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  ::slotted(svg), svg {
+    width: 20% !important;
+  }
+}
+
+
+.swiper-scrollbar {
+  width: 220px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  position: relative;
+  margin-top: 20px;
+}
+
+.swiper-scrollbar {
+  background: rgba(0, 0, 0, 0.1);
+  height: 2px !important;
+  border-radius: 2px;
+}
+
+@media (min-width:1200px) {
+  .swiper-button-next, .swiper-button-prev {
+    display: flex !important;
+  }
+}
+@media (max-width:1085px) {
+  .block-slider .mySwiper_about {
+    height: clamp(350px,40vw,560px);
+  }
+}
+
+@media (max-width:768px) {
+  .block-slider h2 {
+    font-size: clamp(21px,4vw,28px);
+    margin-left: 12px;
+  }
+}

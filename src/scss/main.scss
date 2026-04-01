@@ -1,0 +1,54 @@
+@import './mainPage';
+@import './colorBlock';
+@import './swiperAbout';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Для компенсации фиксированного хедера */
+section[id] {
+    scroll-margin-top: 80px; /* Высота вашего хедера */
+}
+
+@font-face {
+    font-family: 'about-cursive';
+    src: url('../fonts/KalissaRegular_0.otf'),url('../fonts/KalissaRegular_0.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-reg';
+    src: url('../fonts/Montserrat-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-bold';
+    src: url('../fonts/Montserrat-Bold.ttf');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Montserrat-semi';
+    src: url('../fonts/Montserrat-SemiBold.ttf');
+    font-weight: 500;
+    font-style: Medium;
+}
+@font-face {
+    font-family: 'Montserrat-light';
+    src: url('../fonts/Montserrat-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}

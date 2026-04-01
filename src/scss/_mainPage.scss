@@ -1,0 +1,115 @@
+.about-btn {
+    font-family: 'Montserrat-bold';
+    cursor: pointer;
+    border: 0;
+    height: 100%;
+    padding: 0 24px;
+    color: #1C1C1C;
+    border-radius: 16px;
+    font-size: 17px;
+}
+.about-btn.disabled {
+    background-color: rgba(28, 28, 28, 0.05);    
+    backdrop-filter: blur(7.5px);
+}
+.about-btn.yellow {
+    background-color: rgba(255, 231, 10, 1);
+}
+
+.about_main {
+    overflow: hidden;
+    font-family: 'Montserrat-reg';
+    
+    .main-sec {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: auto;
+        min-height: 740px;
+        padding-top: 71px;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        justify-self: center;
+
+        .img-con-bg {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+
+        }
+        .text-con {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            align-self: center;
+            justify-content: center;
+            justify-self: center;
+            z-index: 2;
+            color: #fff;
+            h1 {
+                font-family: 'about-cursive';
+                padding-bottom: 16px;
+                font-size: 74px;
+            }
+            p {
+                font-size: 17px;
+                padding-bottom: 32px;
+            }
+            .btn-con {
+                display: flex;
+                width: 100%;
+                font-size: 17px;
+                height: 48px;
+                gap: 20px;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width:1540px) {
+    .about_main .main-sec .text-con h1 {
+        font-size: clamp(32px,5vw,74px);
+    }
+}
+@media (max-width:768px) {
+    .about_main .main-sec .text-con p {
+        font-size: 15px;
+    }
+    .about-btn {
+        font-size: 15px;
+    }
+}
+@media (min-width:1494px) {
+    
+    .about_main .main-sec .img-con-bg img {
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+        object-fit: cover;
+    }
+    .about_main .main-sec .img-con-bg {
+        display: flex;
+    }
+}
+
+@media (max-width:880px) {
+    
+    .header .wrapper a svg{
+        width: clamp(160px, 40vw,226px) !important;
+    }
+}

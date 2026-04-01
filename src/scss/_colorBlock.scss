@@ -1,0 +1,119 @@
+.color-section:nth-child(even) {
+    .text-con {
+        order: -1;
+    }
+}
+.color-section {
+    display: grid;
+    font-family: 'Montserrat-reg';
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    .img-con {
+        display: flex;
+        max-height: 702px;
+        align-items: center;
+        overflow: hidden;
+        img {
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+    .text-con {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        align-self: center;
+        padding: 57px;
+        h2 {
+            font-family: 'about-cursive';
+            margin-bottom: 16px;
+            font-size: 84px;
+        }
+        p {
+            max-width: 670px;
+            font-size: 17px;
+        }
+        .about-btn {
+            margin-top: 32px;
+            align-self: flex-start;
+            height: 48px;
+        }
+    }
+}
+
+.color-section.orange {
+    background-color: rgb(251, 90, 0);
+    .text-con{
+        h2{
+            color: #fff;
+        }
+        p {
+            color: #fff;
+        }
+    }
+}
+.color-section.yellow {
+    background-color: rgb(255, 241, 107);
+}
+
+.color-section.green {
+    background-color: rgb(0, 184, 92);
+    .text-con{
+        h2{
+            color: #fff;
+        }
+        p {
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width:1540px) {
+    .color-section .text-con h2 {
+        font-size: clamp(32px,6vw,84px);
+    }
+}
+
+@media (max-width:1214px) {
+    .color-section {
+        align-items: center;
+    }
+    .color-section .img-con {
+        height: 100%;
+        max-height: none;
+    }
+    .color-section .img-con img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+}
+
+@media (max-width:767px)  {
+    .mt-20 {
+        margin-top: 20px;
+    }
+    .color-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .color-section:nth-child(even) {
+        .text-con {
+            order: 1;
+        }
+    }
+    .color-section .img-con img {
+        width: 100%;
+        height: auto;
+    }   
+    .color-section .text-con {
+        padding: 28px 20px 48px;
+    }
+    .color-section .img-con {
+        width: 100%;
+    }
+    .color-section .text-con p {
+        font-size: 15px;
+    }
+}
