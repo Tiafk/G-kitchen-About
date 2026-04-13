@@ -1,0 +1,91 @@
+.btn-con-main {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    .wrapper {
+        display: flex;
+        width: 100%;
+        max-width: 1140px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        a {
+            width: 100%;
+            max-width: 265px;
+            .btn-con {
+                cursor: pointer;
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: 265px;
+                overflow: hidden;
+                justify-content: space-between;
+                border-radius: 6px;
+                &:hover {
+                    img {
+                        scale: 1.2;
+                        transition: 8s ease;
+                    }
+                }
+                img {
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 1;
+                    scale: 1;
+                    transition: 3s ease;
+                }
+                p {
+                    font-family: 'Montserrat-bold';
+                    padding: 2rem 0;
+                    padding-left: 8px;
+                    align-self: end;
+                    color: #fff;
+                    z-index: 2;
+                    font-size: 33px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1116px) {
+    .btn-con-main .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:10px;
+    }
+    .btn-con-main .wrapper a {
+        max-width: none;
+    }
+    .btn-con-main .wrapper a .btn-con p {
+        padding-right: 8px;
+        font-size: clamp(18px,4vw,33px);
+    }
+    .btn-con-main .wrapper a .btn-con {
+        justify-content: center;
+    }
+}
+
+@media (max-width:430px) {
+    .btn-con-main .wrapper {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .btn-con-main .wrapper a .btn-con {
+        height: 430px;
+    }
+    .btn-con-main .wrapper a .btn-con p {
+        padding: 32px 16px;
+    }
+    .btn-con-main .wrapper a .btn-con {
+        justify-content: start;
+    }
+}

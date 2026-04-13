@@ -17,6 +17,13 @@
 }
 
 .about_main {
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     font-family: 'Montserrat-reg';
     
@@ -72,10 +79,14 @@
             .btn-con {
                 display: flex;
                 width: 100%;
+                max-width: 220px;
                 font-size: 17px;
                 height: 48px;
                 gap: 20px;
                 justify-content: center;
+                a, .about-btn{
+                    width: 100%;
+                }
             }
         }
     }

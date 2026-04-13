@@ -1,12 +1,12 @@
 
 .block-slider {
+  box-sizing: border-box;
     display: flex;
     position: relative;
     width: 100%;
     height: 100%;
     flex-direction: column;
     margin-bottom: 40px;
-    padding: 0 10px;
     h2 {
         margin-left: 10%;
         font-size: 28px;
@@ -17,28 +17,26 @@
     .mySwiper_about {
       user-select: none;
       width: 100%;
-      height: 560px;
+      height: 460px;
       overflow: visible;
-
-      .swiper-wrapper {
-        box-sizing: border-box;
-        padding-bottom: 20px;
-
-          .swiper-slide {
-            display: flex;
-            width: auto;
-            height: 100%;
-            object-fit: cover;
-            overflow: hidden;
-            img {
-              border-radius: 20px;
-                height: 100%;
-                object-fit: cover;
-            }
-          }
-      }
+      padding-bottom: 40px;
     }
-}
+  }
+.swiper-slide {
+  background-color: #aeaeae;
+    display: flex;
+    width: 100% !important;
+    max-width: fit-content;
+    // max-width: 360px;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    img {
+      border-radius: 20px;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
 
 .swiper-button-next {
   margin-right: 20px;
@@ -60,19 +58,19 @@
 }
 
 
-.swiper-scrollbar {
-  width: 220px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  position: relative;
-  margin-top: 20px;
-}
+// .swiper-scrollbar {
+//   width: 220px !important;
+//   left: 50% !important;
+//   transform: translateX(-50%) !important;
+//   position: relative;
+//   margin-top: 20px;
+// }
 
-.swiper-scrollbar {
-  background: rgba(0, 0, 0, 0.1);
-  height: 2px !important;
-  border-radius: 2px;
-}
+// .swiper-scrollbar {
+//   background: rgba(0, 0, 0, 0.1);
+//   height: 2px !important;
+//   border-radius: 2px;
+// }
 
 @media (min-width:1200px) {
   .swiper-button-next, .swiper-button-prev {

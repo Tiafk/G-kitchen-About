@@ -1,0 +1,32 @@
+.block-slider {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1140px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        margin-left: 0;
+    }
+    .mySwiper_zavtrak .swiper-wrapper {
+        justify-content: start;
+    }
+    .mySwiper_banket .swiper-wrapper {
+        justify-content: center;
+    }
+    .mySwiper_banket .swiper-wrapper .swiper-slide{
+        margin-right: 0 !important;
+    }
+    .mySwiper_about {
+
+        .swiper-wrapper {
+
+            .swiper-slide {
+                background-color: #aeaeae;
+                border-radius: 20px;
+            }
+        }
+    }
+}

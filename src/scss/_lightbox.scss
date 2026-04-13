@@ -1,0 +1,142 @@
+/* Затемненный фон для lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow: hidden; /* Скролл будет внутри контента */
+}
+
+/* Контент lightbox — центрирование и скролл */
+.lightbox-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto; /* Вертикальная прокрутка для высоких картинок */
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Увеличенное изображение */
+#lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+}
+
+/* Кнопка закрытия */
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close-lightbox:hover {
+    color: #ccc;
+}
+
+/* Кнопки навигации */
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    transition: 0.2s;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    color: rgb(197, 197, 197);
+}
+
+
+
+
+
+
+
+
+
+
+/* Кнопки управления зумом */
+.lightbox-zoom-in,
+.lightbox-zoom-out,
+.lightbox-zoom-reset {
+    position: fixed;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10001;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.lightbox-zoom-in {
+    right: 100px;
+}
+
+.lightbox-zoom-out {
+    right: 20px;
+}
+
+.lightbox-zoom-reset {
+    right: 180px;
+}
+
+.lightbox-zoom-in:hover,
+.lightbox-zoom-out:hover,
+.lightbox-zoom-reset:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .lightbox-zoom-in,
+    .lightbox-zoom-out,
+    .lightbox-zoom-reset {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+    
+    .lightbox-zoom-in {
+        right: 80px;
+    }
+    
+    .lightbox-zoom-reset {
+        right: 150px;
+    }
+}

@@ -1,6 +1,9 @@
 @import './mainPage';
 @import './colorBlock';
 @import './swiperAbout';
+@import './btnSec';
+@import './abotSliderMenu';
+@import './lightbox';
 
 *{
     margin: 0;
@@ -14,6 +17,10 @@ html {
 a {
     text-decoration: none;
     color: #fff;
+}
+
+body {
+    background-color: #EEEEE4;
 }
 
 /* Для компенсации фиксированного хедера */

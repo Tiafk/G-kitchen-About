@@ -20,6 +20,13 @@
 }
 
 .about_main {
+  box-sizing: border-box;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   font-family: "Montserrat-reg";
 }
@@ -75,10 +82,14 @@
 .about_main .main-sec .text-con .btn-con {
   display: flex;
   width: 100%;
+  max-width: 220px;
   font-size: 17px;
   height: 48px;
   gap: 20px;
   justify-content: center;
+}
+.about_main .main-sec .text-con .btn-con a, .about_main .main-sec .text-con .btn-con .about-btn {
+  width: 100%;
 }
 
 @media (max-width: 1540px) {
@@ -224,13 +235,13 @@
   }
 }
 .block-slider {
+  box-sizing: border-box;
   display: flex;
   position: relative;
   width: 100%;
   height: 100%;
   flex-direction: column;
   margin-bottom: 40px;
-  padding: 0 10px;
 }
 .block-slider h2 {
   margin-left: 10%;
@@ -239,23 +250,27 @@
   padding: 72px 0 28px;
 }
 .block-slider .mySwiper_about {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   width: 100%;
-  height: 560px;
+  height: 460px;
   overflow: visible;
+  padding-bottom: 40px;
 }
-.block-slider .mySwiper_about .swiper-wrapper {
-  box-sizing: border-box;
-  padding-bottom: 20px;
-}
-.block-slider .mySwiper_about .swiper-wrapper .swiper-slide {
+
+.swiper-slide {
+  background-color: #aeaeae;
   display: flex;
-  width: auto;
+  width: 100% !important;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
 }
-.block-slider .mySwiper_about .swiper-wrapper .swiper-slide img {
+.swiper-slide img {
   border-radius: 20px;
   height: 100%;
   -o-object-fit: cover;
@@ -279,20 +294,6 @@
   width: 20% !important;
 }
 
-.swiper-scrollbar {
-  width: 220px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  position: relative;
-  margin-top: 20px;
-}
-
-.swiper-scrollbar {
-  background: rgba(0, 0, 0, 0.1);
-  height: 2px !important;
-  border-radius: 2px;
-}
-
 @media (min-width: 1200px) {
   .swiper-button-next, .swiper-button-prev {
     display: flex !important;
@@ -309,6 +310,251 @@
     margin-left: 12px;
   }
 }
+.btn-con-main {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.btn-con-main .wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1140px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.btn-con-main .wrapper a {
+  width: 100%;
+  max-width: 265px;
+}
+.btn-con-main .wrapper a .btn-con {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 265px;
+  overflow: hidden;
+  justify-content: space-between;
+  border-radius: 6px;
+}
+.btn-con-main .wrapper a .btn-con:hover img {
+  scale: 1.2;
+  transition: 8s ease;
+}
+.btn-con-main .wrapper a .btn-con img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+  scale: 1;
+  transition: 3s ease;
+}
+.btn-con-main .wrapper a .btn-con p {
+  font-family: "Montserrat-bold";
+  padding: 2rem 0;
+  padding-left: 8px;
+  align-self: end;
+  color: #fff;
+  z-index: 2;
+  font-size: 33px;
+}
+
+@media (max-width: 1116px) {
+  .btn-con-main .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .btn-con-main .wrapper a {
+    max-width: none;
+  }
+  .btn-con-main .wrapper a .btn-con p {
+    padding-right: 8px;
+    font-size: clamp(18px, 4vw, 33px);
+  }
+  .btn-con-main .wrapper a .btn-con {
+    justify-content: center;
+  }
+}
+@media (max-width: 430px) {
+  .btn-con-main .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-con-main .wrapper a .btn-con {
+    height: 430px;
+  }
+  .btn-con-main .wrapper a .btn-con p {
+    padding: 32px 16px;
+  }
+  .btn-con-main .wrapper a .btn-con {
+    justify-content: start;
+  }
+}
+.block-slider {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1140px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.block-slider h2 {
+  margin-left: 0;
+}
+.block-slider .mySwiper_zavtrak .swiper-wrapper {
+  justify-content: start;
+}
+.block-slider .mySwiper_banket .swiper-wrapper {
+  justify-content: center;
+}
+.block-slider .mySwiper_banket .swiper-wrapper .swiper-slide {
+  margin-right: 0 !important;
+}
+.block-slider .mySwiper_about .swiper-wrapper .swiper-slide {
+  background-color: #aeaeae;
+  border-radius: 20px;
+}
+
+/* Затемненный фон для lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow: hidden; /* Скролл будет внутри контента */
+}
+
+/* Контент lightbox — центрирование и скролл */
+.lightbox-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow-y: auto; /* Вертикальная прокрутка для высоких картинок */
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Увеличенное изображение */
+#lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
+}
+
+/* Кнопка закрытия */
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close-lightbox:hover {
+  color: #ccc;
+}
+
+/* Кнопки навигации */
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  transition: 0.2s;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: rgb(197, 197, 197);
+}
+
+/* Кнопки управления зумом */
+.lightbox-zoom-in,
+.lightbox-zoom-out,
+.lightbox-zoom-reset {
+  position: fixed;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10001;
+  transition: 0.3s;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.lightbox-zoom-in {
+  right: 100px;
+}
+
+.lightbox-zoom-out {
+  right: 20px;
+}
+
+.lightbox-zoom-reset {
+  right: 180px;
+}
+
+.lightbox-zoom-in:hover,
+.lightbox-zoom-out:hover,
+.lightbox-zoom-reset:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .lightbox-zoom-in,
+  .lightbox-zoom-out,
+  .lightbox-zoom-reset {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+  .lightbox-zoom-in {
+    right: 80px;
+  }
+  .lightbox-zoom-reset {
+    right: 150px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -321,6 +567,10 @@ html {
 a {
   text-decoration: none;
   color: #fff;
+}
+
+body {
+  background-color: #EEEEE4;
 }
 
 /* Для компенсации фиксированного хедера */
