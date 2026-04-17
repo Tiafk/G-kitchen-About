@@ -1,0 +1,25 @@
+.block-slider .mySwiper_child {
+    height: 560px;
+}
+
+@media (max-width: 508px) {
+    .block-slider .mySwiper_child .swiper-slide img{
+        height: auto;
+        width: 100%;
+    }
+    .block-slider .mySwiper_child .swiper-wrapper .swiper-slide {
+        background-color: transparent;
+    }
+    .block-slider .mySwiper_child {
+        height: auto !important;
+    } 
+    .block-slider .mySwiper_child .swiper-wrapper {
+        height: auto;
+    }
+}
+
+@media (max-width: 1085px) {
+    .block-slider .mySwiper_child {
+        height: clamp(350px, 40vw, 560px);
+    }
+}

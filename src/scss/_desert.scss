@@ -1,0 +1,18 @@
+.mySwiper_desert .swiper-wrapper {
+    justify-content: center;
+}
+.block-slider .mySwiper_desert {
+    height: 560px;
+}
+
+@media (max-width: 1085px) {
+    .block-slider .mySwiper_desert {
+        height: clamp(350px, 40vw, 560px);
+    }
+}
+
+@media (max-width:440px ) {
+    .mySwiper_desert .swiper-wrapper {
+        justify-content: start;
+    }
+}
