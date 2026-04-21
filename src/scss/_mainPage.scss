@@ -18,7 +18,7 @@
 
 .about_main {
     box-sizing: border-box;
-    padding: 0 10px;
+    // padding: 0 10px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -95,6 +95,11 @@
 @media (max-width:1540px) {
     .about_main .main-sec .text-con h1 {
         font-size: clamp(32px,5vw,74px);
+    }
+}
+@media (max-width:1400px) {
+    .about_main {
+        padding: 0 10px;
     }
 }
 @media (max-width:768px) {
